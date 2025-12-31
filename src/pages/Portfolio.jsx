@@ -120,7 +120,7 @@ const Portfolio = () => {
                   activeProject === project.id ? null : project.id
                 )
               }
-              className="group relative h-[300px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 animate-in fade-in zoom-in duration-500"
+              className="group relative h-75 rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 animate-in fade-in zoom-in duration-500"
             >
               {/* Project Image */}
               <img

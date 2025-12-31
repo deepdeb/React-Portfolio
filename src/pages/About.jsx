@@ -88,7 +88,7 @@ const About = () => {
                   { title: "Software Developer", company: "SAP Labs", date: "Feb 2017 - Dec 2017", desc: "Built performant React applications with REST APIs." },
                 ].map((exp, idx) => (
                   <div key={idx} className="flex gap-4 relative pb-6 border-l-2 border-slate-100 dark:border-slate-800 ml-4 pl-8 last:pb-0">
-                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+                    <div className="absolute -left-2.5 top-0 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
                     <div>
                       <h4 className="font-bold text-slate-900 dark:text-white leading-none mb-1">{exp.title}</h4>
                       <span className="text-xs font-bold text-blue-600 uppercase tracking-tighter">{exp.company} | {exp.date}</span>

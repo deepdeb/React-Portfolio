@@ -47,7 +47,7 @@ const Services = () => {
               key={index}
               className="group relative p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/40 border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500/50 flex flex-col"
             >
-              <div className='flex-grow'>
+              <div className='grow'>
                 {/* Icon Container */}
                 <div className="w-16 h-16 mb-6 flex items-center justify-center text-3xl rounded-2xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 transition-colors duration-500 group-hover:bg-blue-600 group-hover:text-white">
                   {service.icon}
