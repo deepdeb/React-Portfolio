@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
+
+  const [activeProject, setActiveProject] = useState(null)
+
 
   const projects = [
     {
@@ -96,8 +100,8 @@ const Portfolio = () => {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-6 py-2 text-xs font-bold uppercase tracking-widest rounded-xl transition-all ${filter === cat
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
                 {cat}
@@ -111,6 +115,11 @@ const Portfolio = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
+              onClick={() =>
+                setActiveProject(
+                  activeProject === project.id ? null : project.id
+                )
+              }
               className="group relative h-[300px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 animate-in fade-in zoom-in duration-500"
             >
               {/* Project Image */}
@@ -121,7 +130,18 @@ const Portfolio = () => {
               />
 
               {/* Glass Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{
+                  opacity:
+                    activeProject === project.id ? 1 : 0,
+                  y:
+                    activeProject === project.id ? 0 : 30,
+                }}
+                whileHover={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/80 to-transparent flex flex-col justify-end p-8"
+              >
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2 block">
                     {project.category}
@@ -142,7 +162,7 @@ const Portfolio = () => {
                     <FaExternalLinkAlt size={16} />
                   </a>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>

@@ -145,14 +145,14 @@ const Navbar = () => {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
 
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-slate-950 border-2 border-slate-200 dark:border-slate-700 rounded-2xl z-50 shadow-2xl py-20 px-20 lg:hidden"
+            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-slate-950 border-2 border-slate-200 dark:border-slate-700 rounded-2xl z-50 shadow-2xl py-10 md:py-15 px-20 md:px-25 lg:hidden"
           >
             <ul className="flex flex-col items-center justify-center h-full gap-8">
               {links.map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => handleScrollTo(link.to)}
-                    className={`text-3xl font-black transition-colors ${activeSection === link.to ? 'text-blue-600' : 'text-slate-900 dark:text-white hover:text-blue-600'}`}
+                    className={`text-2xl md:text-3xl font-black transition-colors ${activeSection === link.to ? 'text-blue-600' : 'text-slate-900 dark:text-white hover:text-blue-600'}`}
                   >
                     {link.label}
                   </button>
