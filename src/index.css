@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
 @import 'tailwindcss';
-
 
 /* dark/light theme  */
 @variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
@@ -9,4 +9,5 @@
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+  font-family: 'Comic Relief'
 }

@@ -45,8 +45,8 @@ const About = () => {
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={`pb-4 text-sm font-black uppercase tracking-widest transition-all relative ${activeTab === tab
-                      ? 'text-blue-600'
-                      : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-200'
+                    ? 'text-blue-600'
+                    : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-200'
                     }`}
                 >
                   {tab}
@@ -102,14 +102,14 @@ const About = () => {
             {/* Tab Content: Education */}
             {activeTab === 'education' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 flex gap-5 items-center">
-                  <div className="p-4 bg-amber-100 dark:bg-amber-900/20 text-amber-600 rounded-2xl text-2xl">
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 transition-hover hover:border-blue-500/50">
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl">
                     <FaGraduationCap />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 dark:text-white text-lg">B.Tech in Electrical Engineering</h4>
-                    <p className="text-blue-600 font-bold text-sm">GNIT (2012 - 2016)</p>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Graduated with CGPA 7.069</p>
+                    <h4 className="font-bold text-slate-900 dark:text-white">B.Tech in Electrical Engineering</h4>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">GNIT (2012 - 2016)</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Graduated with CGPA 7.069</p>
                   </div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const About = () => {
               <img
                 src="images/me.png"
                 alt="Pradeep Debnath"
-                className="w-full lg:grayscale lg:hover:grayscale-0 transition-all duration-700 object-cover"
+                className="w-full duration-700 object-cover"
               />
             </div>
             {/* Decorative element */}
