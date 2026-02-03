@@ -30,8 +30,8 @@ const Portfolio = () => {
       category: 'design',
       title: 'Analytics Dashboard',
       desc: 'Comprehensive analytics dashboard for financial performance tracking',
-      img: 'images/nextjs-dashboard.png',
-      link: 'https://next-realtime-dashboard-frontend.vercel.app/',
+      img: 'images/analytics-dashboard.png',
+      link: 'https://dashboard-credit.netlify.app/',
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const Portfolio = () => {
       title: 'Social Media Website',
       desc: 'Social media/Image sharing website for club goers.',
       img: 'images/Connectcircle-landing.png',
-      link: '#', // Add real link if available
+      link: 'images/Connectcircle-landing.png',
     },
     {
       id: 6,
