@@ -33,7 +33,7 @@ const About = () => {
               Fullstack Developer
             </h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 text-lg">
-              With over 2.5 years of experience in web development, I've worked on diverse projects from
+              With over 2.9 years of experience in web development, I've worked on diverse projects from
               enterprise applications to innovative startups. My passion lies in creating efficient, scalable
               solutions that deliver exceptional user experiences.
             </p>
