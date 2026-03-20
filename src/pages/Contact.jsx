@@ -1,10 +1,8 @@
 import { FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { FaSquareUpwork, FaXTwitter } from 'react-icons/fa6';
-import { useNavigate } from 'react-router-dom';
 import { toast } from "sonner"
 
 const Contact = () => {
-  const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
