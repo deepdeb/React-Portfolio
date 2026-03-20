@@ -1,8 +1,38 @@
-import React from 'react';
 import { FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { FaSquareUpwork, FaXTwitter } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
+import { toast } from "sonner"
 
 const Contact = () => {
+  const navigate = useNavigate();
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xjkrglgo", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        toast.success("Message sent successfully 🎉", {
+          description: "I'll get back to you soon.",
+        });
+        e.target.reset();
+      } else {
+        toast.error("Failed to send message ❌");
+      }
+    } catch (error) {
+      toast.error("Something went wrong ⚠️")
+    }
+  }
+
   return (
     <section id="contact" className="relative py-20 lg:py-30 px-4 lg:px-30 bg-white dark:bg-slate-950 transition-colors duration-300">
 
@@ -106,7 +136,7 @@ const Contact = () => {
 
           {/* Contact Form Side */}
           <div className="p-8 md:p-10 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none">
-            <form id="contactForm" action="https://formspree.io/f/xjkrglgo" method="post" className="space-y-6">
+            <form id="contactForm" onSubmit={handleFormSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
